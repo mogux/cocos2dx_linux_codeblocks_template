@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="HelloCpp" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="debug">
+				<Option output="bin/debug/HelloCpp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<MakeCommands>
+					<Build command="bash build.sh DEBUG=1" />
+					<CompileFile command="$make -f $makefile $file DEBUG=1" />
+					<Clean command="$make -f $makefile clean DEBUG=1" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile DEBUG=1" />
+					<SilentBuild command="bash build.sh DEBUG=1 &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="release">
+				<Option output="bin/release/HelloCpp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<MakeCommands>
+					<Build command="bash build.sh DEBUG=0" />
+					<CompileFile command="$make -f $makefile $file DEBUG=0" />
+					<Clean command="$make -f $makefile clean DEBUG=0" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile DEBUG=0" />
+					<SilentBuild command="bash build.sh DEBUG=0 &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="../Classes/AppDelegate.cpp" />
+		<Unit filename="../Classes/AppDelegate.h" />
+		<Unit filename="../Classes/AppMacros.h" />
+		<Unit filename="../Classes/HelloWorldScene.cpp" />
+		<Unit filename="../Classes/HelloWorldScene.h" />
+		<Unit filename="Makefile" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion>
+				<search_path add="../../../cocos2dx" />
+				<search_path add="../../../cocos2dx/include" />
+				<search_path add="../../../cocos2dx/kazmath/include" />
+				<search_path add="../../../cocos2dx/platform/linux" />
+				<search_path add="../../../cocos2dx/platform/third_party/linux/include64" />
+				<search_path add="../../../external" />
+				<search_path add="../../../external/chipmunk/include/chipmunk" />
+				<search_path add="../../../CocosDenshion/include" />
+				<search_path add="../../../extensions" />
+				<search_path add="../Classes" />
+			</code_completion>
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

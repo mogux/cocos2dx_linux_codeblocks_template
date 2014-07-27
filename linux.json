@@ -1,0 +1,9 @@
+{
+    "rename":               ["PROJECT_NAME.cbp"],
+    "remove":               [],
+    "replace_package_name": [],
+    "replace_project_name": [".cproject",
+		                     ".project",
+						     "Makefile",
+						     "PROJECT_NAME.cbp"]
+}
